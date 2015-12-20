@@ -103,7 +103,7 @@ public class CoolWeatherDb
             values.put("city_name", city.getCityName());
             values.put("city_code", city.getCityCode());
             values.put("province_id", city.getProvinceId());
-            db.insert("city", null, null);
+            db.insert("city", null, values);
         }
 
     }
@@ -142,7 +142,7 @@ public class CoolWeatherDb
         values.put("country_name", country.getCountryName());
         values.put("country_code", country.getCountryCode());
         values.put("city_id", country.getCityId());
-        db.insert("City", null, null);
+        db.insert("Country", null, values);
     }
 
     /**
